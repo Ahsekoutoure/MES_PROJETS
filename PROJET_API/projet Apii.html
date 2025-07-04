@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  body{ background: greenyellow; text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;} 
+  .dic{background: floralwhite; display: flex;width: 300px; height: 200px;justify-content: center;margin: auto;flex-wrap: wrap;flex-direction: column;}
+    .resch{background: rgb(196, 237, 186);height: 300px;width: 200px;display: flex; flex-wrap: wrap;justify-content: center;}
+    .cl{background: rgb(114, 118, 113);height: 200px;width: 100px;display: flex; flex-wrap: wrap;justify-content: center;} p{text-align: center;margin: auto;}
+    button{width: 90px;height: 30px;}
+    </style>
+</head>
+<body>
+    
+            <h1>Centre de blaque </h1>
+
+      <div class="dic">
+             <div class="resch">
+             <p id="capital"></p>
+            </div>
+          <div class="cl" >
+             <h6>click pour lire une Blague</h6>
+            <button onclick="recherche()" id="btn">Blague</button>
+          </div>
+     </div>
+     
+
+   <script>
+    let blag = document.getElementById('capital')
+    let Bouton = document.getElementById('btn')
+
+    function recherche(){
+    
+    const url="https://v2.jokeapi.dev/joke/Any?lang=fr&idRange=1-999"
+    fetch(url)
+    .then(Response =>Response.json())
+    .then(data =>{
+      blag.innerHTML= (data.setup+"<br>"+'<img src="images.jpg" alt="blague" style="width: 30px;height: 30px;">');
+      blag.style.color ='red'
+      setTimeout(() =>{
+        blag.innerHTML= (data.delivery+"<br>"+'<img src="téléchargement.jpg" alt="blague" style="width: 30px;height: 30px;">');
+        blag.style.color =''
+        
+      },5000)
+         
+    })
+    .catch(err =>{
+        console.log('erreur');
+        
+    })
+    setTimeout(()=>{
+     Bouton.textContent= 'New Blague'
+     Bouton.style.background = 'green'
+    },10000)
+    
+}
+   </script>
+</body>
+</html>
