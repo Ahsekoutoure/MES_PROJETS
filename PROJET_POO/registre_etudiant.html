@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre Etudiant</title> 
+        <style> body { font-family: Arial, sans-serif; padding: 20px; background: rgb(212, 209, 209);} 
+        h1 { color: #2c3e50; } input, button { margin: 5px 0; padding: 8px; width: 100%; } 
+        .etudiant { border: 1px solid #ccc; padding: 10px; margin-top: 10px; border-radius: 5px;background: rgb(201, 227, 162); } 
+        .btn{background: rgb(240, 136, 136);}
+        </style> 
+</head>
+<body>
+ <h1>Registre d'Etudiant</h1> 
+            <form id="formEtud"> 
+                <input type="text" id="matricule" placeholder="Matricule" required>
+                <input type="text" id="nom" placeholder="Nom" required> 
+                <input type="text" id="telephone" placeholder="Téléphone" required> 
+                <input type="email" id="email" placeholder="Email" required> 
+                <button type="submit">Ajouter le contact</button> 
+            </form> 
+            <h2>Liste des Etudiants</h2> 
+            <div id="listeEtudiants"></div> 
+
+    <script src="registre_etudiant.js"></script>
+</body>
+</html>

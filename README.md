@@ -26,4 +26,16 @@ Tout est sauvegardé dans localStorage, donc les données persistent même aprè
 
  <img src="/PROJET_JSON/Capture.png" alt="capture d'ecran" width="600"/>
 
+ ## PROJET_POO
+## PROJET DE REGITRE D'ETUDIANT (HTLM/CSS/JS/POO)  
+Ce projet  gère un petit système de registre d'enregistrements des etudiants  viaa travers un formulaire ou il renseigne son Matricule, Nom, Telphone et Email.
+d’afficher dynamiquement la liste des etudiantq et de permettre leur suppression un a un. tout en respectant le concept PROGRAMMATION ORIENTE OBJET 
+## FOCTIONALITE UTILISER:
+ CSS ( )
+ JS ( innerHTML, document.getElementByID; document.CreateElement, forEach; Reset() funtion() ;    addEventListener ;  localStorage.setItem ;appendChild())
+ POO( class ; constructor();this. ; new ; des methode( comme: ajouter(etudiant);supprimer(index)...))
+ ## CAPTURE
+
+ <img src="/PROJET_POO/capture.png" alt="capture d'ecran" width="600"/>
+
 
